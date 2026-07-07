@@ -4,11 +4,15 @@
   "name": "Sparqo",
   "description": "Sparqo is an AI CMO: growth agents that find the work and draft it for your approval, across SEO, AI search (GEO) and Reddit.",
   "colors": {
-    "primary": "#0D9488",
-    "light": "#9BF263",
-    "dark": "#0D9488"
+    "primary": "#18181B",
+    "light": "#FAFAFA",
+    "dark": "#18181B"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "navigation": {
     "tabs": [
       {
@@ -16,7 +20,7 @@
         "groups": [
           {
             "group": "Get started",
-            "pages": ["introduction", "quickstart"]
+            "pages": ["introduction", "quickstart", "how-it-works"]
           },
           {
             "group": "Agents",
@@ -29,6 +33,10 @@
           {
             "group": "Setup",
             "pages": ["guides/connections", "guides/brand"]
+          },
+          {
+            "group": "Reference",
+            "pages": ["faq", "support"]
           }
         ]
       }
