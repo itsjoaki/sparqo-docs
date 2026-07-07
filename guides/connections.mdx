@@ -1,31 +1,85 @@
 ---
 title: "Connections"
-description: "Connect your CMS, Search Console and analytics so the agents can act, not just advise."
+description: "Connect your channels, CMS, search data and analytics so the agents can act, not just advise."
 ---
 
-Connect a tool and the agent that uses it goes from advice to action. Connections live in the Connections section of the app.
+Connect a tool and the agent that uses it goes from advice to action. All connections live in the Connections section of the app, grouped by what they power. Third-party connections use managed OAuth or a token you paste, and you can disconnect any of them at any time.
 
-## Publishing (CMS)
+## Channels
 
-Link where your content lives so articles publish with one click (or on a schedule).
+Where your agents post, always after your approval.
 
 <CardGroup cols={2}>
-  <Card title="Strapi" icon="server">
-    Connect with your base URL and an API token. The collection and fields are auto-detected, so you rarely type anything by hand.
+  <Card title="Reddit" icon="https://cdn.simpleicons.org/reddit/FF4500">
+    Surfaces threads worth replying to. You approve, then post from your own account (posting is manual by design, to protect your account).
   </Card>
-  <Card title="GitHub" icon="github">
-    For code or vibe-coded blogs: Sparqo commits a Markdown file with frontmatter to your repo, and your host redeploys.
+  <Card title="X (Twitter)" icon="https://cdn.simpleicons.org/x/000000">
+    Post and thread drafts. Coming soon.
   </Card>
 </CardGroup>
 
-## Google Search Console
+## Publishing
 
-Connect Search Console to turn on the SEO flywheel. Sparqo tracks how your published articles perform and mines your real search data for gaps, emerging queries and cannibalization, then proposes the next articles to write.
+Where the Content & SEO agent ships finished articles. Connect one and publish with a click, or schedule an auto-publish.
 
-## Analytics
+<CardGroup cols={3}>
+  <Card title="WordPress" icon="https://cdn.simpleicons.org/wordpress/21759B">
+    Publish straight to your WordPress blog.
+  </Card>
+  <Card title="Strapi" icon="https://cdn.simpleicons.org/strapi/4945FF">
+    Publish to your headless CMS. Collection and fields are auto-detected.
+  </Card>
+  <Card title="GitHub" icon="https://cdn.simpleicons.org/github/181717">
+    For code or vibe-coded sites (Astro, Next, Hugo): commits a Markdown file with frontmatter and your host redeploys.
+  </Card>
+</CardGroup>
 
-Connect analytics (for example GA4) so Sparqo can see whether the traffic it drives actually converts, and weight its recommendations toward what moves revenue.
+<AccordionGroup>
+  <Accordion title="Connect WordPress">
+    In `Users → Profile`, create an Application Password (name it Sparqo). In Sparqo, paste your site URL, username and that app password.
+  </Accordion>
+  <Accordion title="Connect Strapi">
+    In Strapi, `Settings → API Tokens → Create new API Token` with create rights. In Sparqo, paste the base URL and token; the collection and title/content fields are detected for you.
+  </Accordion>
+  <Accordion title="Connect GitHub">
+    Create a fine-grained personal access token with `Contents: Read and write` on your repo. In Sparqo, enter `owner/repo`, the token, and the folder where your posts live (for example `src/content/blog`).
+  </Accordion>
+</AccordionGroup>
+
+## Search data
+
+<Card title="Google Search Console" icon="https://cdn.simpleicons.org/googlesearchconsole/458CF5">
+  Connect Search Console to turn on the SEO flywheel. Sparqo tracks how your published articles perform and mines your real search data for gaps, emerging queries and cannibalization, then proposes the next articles to write. This feeds both SEO and AI Visibility (GEO).
+</Card>
+
+## Analytics & conversions
+
+Connect an analytics source so the AI CMO learns what actually converts, not just what ships. Any one of these works.
+
+<CardGroup cols={2}>
+  <Card title="Google Analytics 4" icon="https://cdn.simpleicons.org/googleanalytics/E37400">
+    See what is working and where to focus.
+  </Card>
+  <Card title="Plausible" icon="https://cdn.simpleicons.org/plausibleanalytics/6366F1">
+    Conversions by channel, privacy-first.
+  </Card>
+  <Card title="Umami" icon="https://cdn.simpleicons.org/umami/000000">
+    Conversions by channel, self-hostable.
+  </Card>
+  <Card title="PostHog" icon="https://cdn.simpleicons.org/posthog/F54E00">
+    Product analytics as a conversion signal.
+  </Card>
+</CardGroup>
+
+<AccordionGroup>
+  <Accordion title="Connect Plausible / Umami / PostHog">
+    Each connects with your site or project ID plus an API key from that tool's settings. Plausible: `Settings → API Keys`. Umami: `Settings → API Keys` (free when self-hosted). PostHog: `Settings → Personal API Keys`, scope `Query: Read`.
+  </Accordion>
+  <Accordion title="Connect Google Analytics 4">
+    Connect with Google and pick the GA4 property for your site. No key to paste.
+  </Accordion>
+</AccordionGroup>
 
 <Note>
-  Third-party connections use managed OAuth, so you authorize once and Sparqo handles the tokens. You can disconnect any tool at any time.
+  You only need one analytics source and one publishing target to get the flywheel going. Everything else you can add later.
 </Note>
