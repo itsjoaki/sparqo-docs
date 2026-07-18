@@ -2,11 +2,11 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Sparqo",
-  "description": "Sparqo is an AI CMO: growth agents that find the work and draft it for your approval, across SEO, AI search (GEO) and Reddit.",
+  "description": "Sparqo is an AI CMO: a team of growth agents that draft the work for your approval across SEO, content and Reddit. You steer, you approve, they ship.",
   "colors": {
-    "primary": "#18181B",
-    "light": "#FAFAFA",
-    "dark": "#18181B"
+    "primary": "#0D70F9",
+    "light": "#66A6FF",
+    "dark": "#0D70F9"
   },
   "favicon": "/favicon.svg",
   "logo": {
@@ -26,7 +26,6 @@
             "group": "Agents",
             "pages": [
               "guides/content-seo",
-              "guides/ai-visibility",
               "guides/distribution"
             ]
           },
@@ -51,7 +50,8 @@
   },
   "footer": {
     "socials": {
-      "website": "https://sparqo.ai"
+      "website": "https://sparqo.ai",
+      "x": "https://x.com/sparqo_ai"
     }
   }
 }
